@@ -2,6 +2,7 @@
 
 export(db_table)
 export(fetch_db)
+export(sql_array)
 importFrom(DBI,dbGetQuery)
 importFrom(DBI,sqlInterpolate)
 importFrom(dbplyr,in_schema)

@@ -1,5 +1,5 @@
 #' @export
-#' @title Create a tbl that references a db table
+#' @title Create a tbl that references a schema.table in the `conn` database.
 #'
 #' @param conn A database connection.
 #' @param schema A string with schema name.
@@ -34,4 +34,15 @@ fetch_db <- function(conn, path, ...) {
 
   dbGetQuery(conn, query_string) %>%
     as_tibble()
+}
+
+#' @export
+#' @title Transform a vector into a SQL-interpreted array.
+#'
+#' @param vector character vector
+#' @return
+#'   List with a single string that's interpreted as a SQL array to interpolate in a query.
+sql_array <- function(vector) {
+  array <- paste0("(", paste(paste0("'", vector, "'"), collapse = ", "), ")")
+  list(array)
 }
