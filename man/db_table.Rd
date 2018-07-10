@@ -2,7 +2,7 @@
 % Please edit documentation in R/dbutils.R
 \name{db_table}
 \alias{db_table}
-\title{Create a tbl that references a db table}
+\title{Create a tbl that references a schema.table in the `conn` database.}
 \usage{
 db_table(conn, schema, table)
 }

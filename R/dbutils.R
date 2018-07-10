@@ -42,7 +42,7 @@ fetch_db <- function(conn, path, ...) {
 #' @param vector character vector
 #' @return
 #'   List with a single string that's interpreted as a SQL array to interpolate in a query.
-sql_array <- function(vector) {
+as_sql_array <- function(vector) {
   array <- paste0("(", paste(paste0("'", vector, "'"), collapse = ", "), ")")
   list(array)
 }
