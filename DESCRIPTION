@@ -1,7 +1,7 @@
 Package: dbutils
 Type: Package
-Title: A set of utility functions when dealing with databases in R.
-Version: 0.1.0
+Title: A set of utility functions for dealing with databases in R
+Version: 0.2.0
 Maintainer: Susana Quartin <susanaquartin@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
@@ -13,11 +13,13 @@ Authors@R: c(
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Depends: 
   R (>= 3.1.2)
 Imports:
     DBI,
+    odbc,
     dbplyr,
     dplyr,
-    readr
+    readr,
+    future
