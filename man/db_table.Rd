@@ -2,7 +2,7 @@
 % Please edit documentation in R/db_table.R
 \name{db_table}
 \alias{db_table}
-\title{Create a tbl that references a schema.table in the `conn` database.}
+\title{DB Table pointer}
 \usage{
 db_table(conn, schema, table)
 }

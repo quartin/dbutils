@@ -1,5 +1,7 @@
-#' @export
-#' @title Create a tbl that references a schema.table in the `conn` database.
+#' DB Table pointer
+#'
+#' @description
+#' Create a tbl that references a schema.table in the `conn` database.
 #'
 #' @param conn A database connection.
 #' @param schema A string with schema name.
@@ -8,8 +10,7 @@
 #' @return
 #'  A reference to a database table.
 #'
-#' @importFrom dbplyr in_schema
-#' @importFrom dplyr tbl
+#' @export
 db_table <- function(conn, schema, table) {
-  tbl(conn, in_schema(schema, table))
+  dplyr::tbl(conn, dbplyr::in_schema(schema, table))
 }
