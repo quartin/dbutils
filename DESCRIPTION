@@ -21,5 +21,8 @@ Imports:
     odbc,
     dbplyr,
     dplyr,
-    readr,
-    future
+    rlang,
+    readr
+Suggests:
+  future,
+  RPostgres
